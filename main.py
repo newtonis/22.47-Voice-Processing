@@ -11,10 +11,10 @@ from python_speech_features import logfbank
 from compute_features import *
 from compute_model import *
 from trimming import *
+from testing_model import *
 
 
 def load_database():
-
     output = dict()
 
     for actor_id in range(0, 25):
@@ -68,8 +68,15 @@ else:
     data_features = load_features()
 
 
-print("Computing model for speaker 1")
-compute_model("speaker 1", data_features)
+# print("Computing model for speakers")
+# for key in data_features:
+#     print("Computing model for speaker ", key)
+#     compute_model(key, data_features)
+
+#print("Testing model for speaker 1")
+#test_all_models(data_features)
+
+plot_det_curve("speaker 1", data_features)
 
 #plt.plot(x[0])
 #plt.show()

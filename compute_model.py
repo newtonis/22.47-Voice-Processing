@@ -25,3 +25,4 @@ def compute_model(target_speaker, data):
 
     pickle.dump(gmm, open("models/" + target_speaker, 'wb'))
 
+
